@@ -6,8 +6,12 @@ from test.base import HyperJobTest
 class HyperJobTestRunner(HyperJobTest):
 
     funcs = [
+        # 1 task
         HyperJobTest.check_create_vacancies,
-        HyperJobTest.check_create_resumes
+        HyperJobTest.check_create_resumes,
+        # 2 task
+        HyperJobTest.check_greeting,
+        HyperJobTest.check_links,
     ]
 
     @dynamic_test(data=funcs)
