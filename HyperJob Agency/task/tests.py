@@ -12,6 +12,9 @@ class HyperJobTestRunner(HyperJobTest):
         # 2 task
         HyperJobTest.check_greeting,
         HyperJobTest.check_links,
+        # 3 task
+        HyperJobTest.check_vacancies,
+        HyperJobTest.check_resumes,
     ]
 
     @dynamic_test(data=funcs)
