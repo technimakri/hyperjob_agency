@@ -18,10 +18,13 @@ from django.urls import path
 from menu import views as menu_views
 from resume import views as resume_views
 from vacancy import views as vacancy_views
+from authorisation import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', menu_views.MenuView.as_view()),
     path('resumes/', resume_views.ResumeView.as_view()),
     path('vacancies/', vacancy_views.VacancyView.as_view()),
+    path('signup', auth_views.SignUpView.as_view()),
+    path('login', auth_views.MyLoginView.as_view()),
 ]
