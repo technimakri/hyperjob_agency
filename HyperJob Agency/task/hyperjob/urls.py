@@ -19,6 +19,7 @@ from menu import views as menu_views
 from resume import views as resume_views
 from vacancy import views as vacancy_views
 from authorisation import views as auth_views
+from profiles import views as prof_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +28,7 @@ urlpatterns = [
     path('vacancies/', vacancy_views.VacancyView.as_view()),
     path('signup', auth_views.SignUpView.as_view()),
     path('login', auth_views.MyLoginView.as_view()),
+    path('home', prof_views.ProfileView.as_view()),
+    path('resume/new', resume_views.NewResume.as_view()),
+    path('vacancy/new', vacancy_views.NewVacancy.as_view()),
 ]

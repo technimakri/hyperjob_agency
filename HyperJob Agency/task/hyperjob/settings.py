@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'vacancy',
     'menu',
     'authorisation',
+    'profiles',
 ]
 
 MIDDLEWARE = [
